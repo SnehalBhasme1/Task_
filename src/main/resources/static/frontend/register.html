@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<div class="auth-wrapper">
+    <div class="auth-card">
+
+        <div class="auth-brand">
+            <div class="brand-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <span class="brand-name">TaskFlow</span>
+        </div>
+
+        <h1 class="auth-headline">Create account</h1>
+        <p class="auth-sub">Start organising your work in minutes.</p>
+
+        <div class="field-group">
+            <label class="field-label" for="name">Full Name</label>
+            <input class="field-input" type="text" id="name" placeholder="e.g. Snehal Bhasme">
+        </div>
+
+        <div class="field-group">
+            <label class="field-label" for="email">Email Address</label>
+            <input class="field-input" type="email" id="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field-group">
+            <label class="field-label" for="password">Password</label>
+            <input class="field-input" type="password" id="password" placeholder="Min. 6 characters">
+        </div>
+
+        <button class="btn-primary" onclick="register()" id="registerBtn">
+            Create Account
+        </button>
+
+        <div class="auth-divider">
+            Already have an account? <a href="login.html">Sign in</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

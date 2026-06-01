@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<div class="dashboard">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-brand">
+            <div class="brand-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <span class="brand-name">TaskFlow</span>
+        </div>
+        <div class="topbar-actions">
+            <span class="task-count-pill" id="totalCount">0 tasks</span>
+            <button class="btn-logout" onclick="logout()">
+                <i class="fas fa-sign-out-alt" style="margin-right:6px; font-size:13px;"></i>Logout
+            </button>
+        </div>
+    </div>
+
+    <!-- Create Task Panel -->
+    <div class="create-panel">
+        <div class="panel-title">
+            <span class="dot"></span>
+            New Task
+        </div>
+        <div class="create-form">
+            <div>
+                <label class="field-label">Title</label>
+                <input class="field-input" type="text" id="title" placeholder="Task title">
+            </div>
+            <div>
+                <label class="field-label">Description</label>
+                <input class="field-input" type="text" id="description" placeholder="What needs to be done?">
+            </div>
+            <div>
+                <label class="field-label">Status</label>
+                <select class="field-select" id="status">
+                    <option value="Todo">Todo</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            <div>
+                <label class="field-label" style="visibility:hidden;">Add</label>
+                <button class="btn-create" onclick="createTask()">
+                    <i class="fas fa-plus" style="font-size:12px;"></i>
+                    Add Task
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kanban Board -->
+    <div class="board">
+
+        <div class="column col-todo">
+            <div class="column-header">
+                <div class="col-label">
+                    <span class="col-dot"></span>
+                    Todo
+                </div>
+                <span class="col-count" id="todoCount">0</span>
+            </div>
+            <div class="column-body" id="todoTasks">
+                <div class="spinner-wrap"><div class="spinner"></div></div>
+            </div>
+        </div>
+
+        <div class="column col-progress">
+            <div class="column-header">
+                <div class="col-label">
+                    <span class="col-dot"></span>
+                    In Progress
+                </div>
+                <span class="col-count" id="progressCount">0</span>
+            </div>
+            <div class="column-body" id="inProgressTasks">
+                <div class="spinner-wrap"><div class="spinner"></div></div>
+            </div>
+        </div>
+
+        <div class="column col-done">
+            <div class="column-header">
+                <div class="col-label">
+                    <span class="col-dot"></span>
+                    Done
+                </div>
+                <span class="col-count" id="doneCount">0</span>
+            </div>
+            <div class="column-body" id="doneTasks">
+                <div class="spinner-wrap"><div class="spinner"></div></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
