@@ -1,5 +1,4 @@
 package com.learning.spring.dto;
-
 import lombok.Data;
 @Data
 public class LoginRequest {
